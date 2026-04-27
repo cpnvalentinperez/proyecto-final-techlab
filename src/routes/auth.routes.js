@@ -3,6 +3,7 @@ import * as AuthController from '../controllers/auth.controller.js';
 
 const router = Router();
 
+// Requerimiento: POST /auth/login - recibe credenciales y devuelve Bearer token
 router.post('/login', AuthController.login);
 
 export default router;

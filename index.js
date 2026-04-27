@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
+// Registro de las rutas del Requerimiento #4
 app.use('/auth', authRoutes);
 app.use('/api/productos', productRoutes);
 
