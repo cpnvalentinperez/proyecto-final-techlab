@@ -31,9 +31,11 @@ const [,, metodo, ruta, ...extras] = process.argv;
 
 if (metodo) {
     const operacion = metodo.toUpperCase();
-    console.log(`\n--- Ejecutando comando de consola [${operacion}] ---`);
+    console.log(`--- Ejecutando comando de consola [${operacion}] ---`);
 
     if (operacion === 'GET' && ruta === 'products') {
+        console.log("--- CONSULTA DE PRODUCTOS ---");
+        console.log("Buscando datos en FakeStoreAPI y Firestore...");
         console.log("Acción: Listado general de productos solicitado.");
     } 
     else if (operacion === 'DELETE' && ruta.includes('products/')) {

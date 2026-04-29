@@ -1,17 +1,17 @@
 import * as ProductModel from '../models/products.model.js';
 
-export const fetchAllProducts = async () => {
+export const fetchProductos = async () => {
     return await ProductModel.getAll();
 };
 
-export const fetchProductById = async (id) => {
+export const fetchProducto = async (id) => {
     return await ProductModel.getById(id);
 };
 
-export const saveProduct = async (productData) => {
+export const guardarProducto = async (productData) => {
     return await ProductModel.create(productData);
 };
 
-export const deleteProduct = async (id) => {
+export const borrarProducto = async (id) => {
     return await ProductModel.remove(id);
 };

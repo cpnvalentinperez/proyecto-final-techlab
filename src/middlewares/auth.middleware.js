@@ -8,7 +8,7 @@ export const verifyToken = (req, res, next) => {
     const token = authHeader && authHeader.split(' ')[1];
 
     if (!token) {
-        return res.status(401).json({ message: "Access denied. No token provided." });
+        return res.status(401).json({ message: "Token requerido." });
     }
 
     try {
@@ -16,6 +16,6 @@ export const verifyToken = (req, res, next) => {
         req.user = decoded;
         next();
     } catch (error) {
-        res.status(403).json({ message: "Invalid or expired token." });
+        res.status(403).json({ message: "Token inválido o expirado." });
     }
 };
